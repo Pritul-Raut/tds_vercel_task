@@ -21,7 +21,7 @@ async def get_marks(names: list[str]):
     result = []
     for name in names:
         if name in marks_data:
-            result.append(marks_data[name])
+            result.append({"name": name, "marks": marks_data[name]})
         else:
             raise HTTPException(status_code=404, detail=f"Marks for {name} not found")
     return {"marks": result}
