@@ -5,8 +5,13 @@ on: [push]
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
-      - name: 24f1002555@ds.study.iitm.ac.in
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Print email
+        run: echo "24f1002555@ds.study.iitm.ac.in"
+
+      - name: Say Hello World
         run: echo "Hello, world!"
-    
-  
